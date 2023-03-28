@@ -43,10 +43,10 @@
     
     <entry>
       <title>SpringBoot</title>
-      <link href="/2023/03/06/SpringBoot/"/>
-      <url>/2023/03/06/SpringBoot/</url>
+      <link href="/2023/03/06/SoftwareDevelopment/SpringBoot/"/>
+      <url>/2023/03/06/SoftwareDevelopment/SpringBoot/</url>
       
-        <content type="html"><![CDATA[<h3 id="Intellij-IDEA-is-not-recognizing-java-files-as-runnable"><a href="#Intellij-IDEA-is-not-recognizing-java-files-as-runnable" class="headerlink" title="Intellij IDEA is not recognizing  java files as runnable"></a>Intellij IDEA is not recognizing  java files as runnable</h3><ul><li>right-mouse click on your src</li><li>navigate to “Mark Directory As”</li><li>choose “Sources Root” It will now recognize your files correctly and your main classes will be able to run again</li></ul><h3 id="Web-server-failed-to-start-Port-8080-was-already-in-use"><a href="#Web-server-failed-to-start-Port-8080-was-already-in-use" class="headerlink" title="Web server failed to start. Port 8080 was already in use."></a>Web server failed to start. Port 8080 was already in use.</h3><ul><li>First check what processes are using that specific port, then killing it using its process ID:</li></ul><ol><li><p>Run <code>netstat -ano | findstr &lt; Port Number &gt;</code> This will identify which process is listening on port 8080.</p></li><li><p>Take note of the process ID (PID) e.g. 63262</p></li><li><p>Run <code>taskkill /F /PID &lt; Process Id &gt;</code>  replace &lt; Process Id &gt; with PID</p></li></ol>]]></content>
+        <content type="html"><![CDATA[<h3 id="Intellij-IDEA-is-not-recognizing-java-files-as-runnable"><a href="#Intellij-IDEA-is-not-recognizing-java-files-as-runnable" class="headerlink" title="Intellij IDEA is not recognizing  java files as runnable"></a>Intellij IDEA is not recognizing  java files as runnable</h3><ul><li>right-mouse click on your src</li><li>navigate to “Mark Directory As”</li><li>choose “Sources Root” It will now recognize your files correctly and your main classes will be able to run again</li></ul><h3 id="Web-server-failed-to-start-Port-8080-was-already-in-use"><a href="#Web-server-failed-to-start-Port-8080-was-already-in-use" class="headerlink" title="Web server failed to start. Port 8080 was already in use."></a>Web server failed to start. Port 8080 was already in use.</h3><ul><li>First check what processes are using that specific port, then killing it using its process ID:</li></ul><ol><li>Run <code>netstat -ano | findstr &lt; Port Number &gt;</code> This will identify which process is listening on port 8080.</li><li>Take note of the process ID (PID) e.g. 63262</li><li>Run <code>taskkill /F /PID &lt; Process Id &gt;</code>  replace &lt; Process Id &gt; with PID</li></ol><h3 id="Set-the-JDK-for-your-project-and-x2F-or-modules"><a href="#Set-the-JDK-for-your-project-and-x2F-or-modules" class="headerlink" title="Set the JDK for your project and&#x2F;or modules."></a>Set the JDK for your project and&#x2F;or modules.</h3><p>Open the project settings (File-&gt;Project settings…).</p><p>Most of the time you just need to set the project sdk (to your java sdk) and configure the modules to use the project sdk.<br>Probably one of those settings is missing.</p><h3 id="delete-the-push-record-in-git"><a href="#delete-the-push-record-in-git" class="headerlink" title="delete the push record in git"></a>delete the push record in git</h3><p><a href="https://zhuanlan.zhihu.com/p/35078876">https://zhuanlan.zhihu.com/p/35078876</a></p>]]></content>
       
       
       <categories>
@@ -80,25 +80,6 @@
     
     
     <entry>
-      <title>MongoDB🥭</title>
-      <link href="/2023/02/21/MongoDB/"/>
-      <url>/2023/02/21/MongoDB/</url>
-      
-        <content type="html"><![CDATA[<h3 id="What-is-CRUD"><a href="#What-is-CRUD" class="headerlink" title="What is CRUD?"></a>What is CRUD?</h3><p>Create, Read, Update, and Delete (CRUD) are the four basic functions that models should be able to do, at most.</p><h3 id="Spring-Boot-React-and-MongoDB-Architecture"><a href="#Spring-Boot-React-and-MongoDB-Architecture" class="headerlink" title="Spring Boot, React and MongoDB Architecture"></a>Spring Boot, React and MongoDB Architecture</h3><p><img src="https://bezkoder.com/wp-content/uploads/2020/03/spring-boot-react-mongodb-crud-example-architecture.png" alt="spring-boot-react-mongodb-crud-example-architecture"></p><h3 id="Error-message-Process-finished-with-exit-code-1073741819-0xC0000005"><a href="#Error-message-Process-finished-with-exit-code-1073741819-0xC0000005" class="headerlink" title="Error message: Process finished with exit code -1073741819 (0xC0000005)"></a>Error message: Process finished with exit code -1073741819 (0xC0000005)</h3><p>问题描述：<br>    idea中启动项目报  Process finished with exit code -1073741819 (0xC0000005) ，如图所示：</p><p>问题解决：<br>   原因：经过多方查证，问题最终定位在金山词霸2016上，如果开启了金山词霸的划译功能，就会出现此错误，具体原理有待研究。在关闭金山词霸时，有时idea也会自动关闭。</p><p>​    解决：关掉金山词霸，或者把金山词霸的划译功能关掉，然后重启idea，再运行项目就没问题了。经过尝试，发现只要在IDEA第一次打开并运行的时候，没有开启金山词霸的划译功能，那么之后就算开启也不会有问题。所以如果一定需要用金山，就先打开idea运行项目，在打开金山，或者直接把金山的划译功能关掉就可以了。</p><p>   ！！！注意：金山词霸划译与idea2018.3+版本不兼容</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Software Development </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>gradient descent &amp; gradient ascent</title>
       <link href="/2023/02/21/gradient-descent-&amp;-gradient-ascent/"/>
       <url>/2023/02/21/gradient-descent-&amp;-gradient-ascent/</url>
@@ -109,6 +90,25 @@
       <categories>
           
           <category> Machine Learning </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MongoDB🥭</title>
+      <link href="/2023/02/21/SoftwareDevelopment/MongoDB/"/>
+      <url>/2023/02/21/SoftwareDevelopment/MongoDB/</url>
+      
+        <content type="html"><![CDATA[<h3 id="What-is-CRUD"><a href="#What-is-CRUD" class="headerlink" title="What is CRUD?"></a>What is CRUD?</h3><p>Create, Read, Update, and Delete (CRUD) are the four basic functions that models should be able to do, at most.</p><h3 id="Spring-Boot-React-and-MongoDB-Architecture"><a href="#Spring-Boot-React-and-MongoDB-Architecture" class="headerlink" title="Spring Boot, React and MongoDB Architecture"></a>Spring Boot, React and MongoDB Architecture</h3><p><img src="https://bezkoder.com/wp-content/uploads/2020/03/spring-boot-react-mongodb-crud-example-architecture.png" alt="spring-boot-react-mongodb-crud-example-architecture"></p><h3 id="Error-message-Process-finished-with-exit-code-1073741819-0xC0000005"><a href="#Error-message-Process-finished-with-exit-code-1073741819-0xC0000005" class="headerlink" title="Error message: Process finished with exit code -1073741819 (0xC0000005)"></a>Error message: Process finished with exit code -1073741819 (0xC0000005)</h3><p>问题描述：<br>    idea中启动项目报  Process finished with exit code -1073741819 (0xC0000005) ，如图所示：</p><p>问题解决：<br>   原因：经过多方查证，问题最终定位在金山词霸2016上，如果开启了金山词霸的划译功能，就会出现此错误，具体原理有待研究。在关闭金山词霸时，有时idea也会自动关闭。</p><p>​    解决：关掉金山词霸，或者把金山词霸的划译功能关掉，然后重启idea，再运行项目就没问题了。经过尝试，发现只要在IDEA第一次打开并运行的时候，没有开启金山词霸的划译功能，那么之后就算开启也不会有问题。所以如果一定需要用金山，就先打开idea运行项目，在打开金山，或者直接把金山的划译功能关掉就可以了。</p><p>   ！！！注意：金山词霸划译与idea2018.3+版本不兼容</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software Development </category>
           
       </categories>
       
