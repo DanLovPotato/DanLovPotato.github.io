@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Frontend review | Dan's Blog</title><meta name="author" content="Dan"><meta name="copyright" content="Dan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Responsive web windowGrid is “usually” used to define your skeleton structure and flexbox “usually” for the smaller edits of content.  flex inside of grid  grid inside of a flex box  media query 12345">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Frontend review">
+<meta property="og:url" content="https://danlovpotato.github.io/2024/04/26/SoftwareDevelopment/responsiveCSS/index.html">
+<meta property="og:site_name" content="Dan&#39;s Blog">
+<meta property="og:description" content="Responsive web windowGrid is “usually” used to define your skeleton structure and flexbox “usually” for the smaller edits of content.  flex inside of grid  grid inside of a flex box  media query 12345">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2023/02/10/rjhHVtISdz28Tk3.png">
+<meta property="article:published_time" content="2024-04-26T04:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-29T01:01:31.978Z">
+<meta property="article:author" content="Dan">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/02/10/rjhHVtISdz28Tk3.png"><link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2016/03/31/19/26/cherry-blossom-1295009_1280.png"><link rel="canonical" href="https://danlovpotato.github.io/2024/04/26/SoftwareDevelopment/responsiveCSS/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Frontend review',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-28 21:01:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/02/10/rjhHVtISdz28Tk3.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">8</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-paper-plane"></i><span> Messageboard</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Dan's Blog"><span class="site-name">Dan's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fas fa-paper-plane"></i><span> Messageboard</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Frontend review</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-04-26T04:00:00.000Z" title="Created 2024-04-26 00:00:00">2024-04-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-04-29T01:01:31.978Z" title="Updated 2024-04-28 21:01:31">2024-04-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Software-Development/">Software Development</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Frontend review"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Responsive-web-window"><a href="#Responsive-web-window" class="headerlink" title="Responsive web window"></a>Responsive web window</h1><p>Grid is “usually” used to define your skeleton structure and flexbox “usually” for the smaller edits of content.</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/flexgrid.png" alt="image-20240427214356787"></p>
+<p>flex inside of grid</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/flexg.png" alt="image-20240427214632721"></p>
+<p>grid inside of a flex box</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/igridf.png" alt="image-20240427214724722"></p>
+<h2 id="media-query"><a href="#media-query" class="headerlink" title="media query"></a>media query</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/media1.png" alt="image-20240427165954399"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Default styles for all screen sizes */</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Media query for screens with a maximum width of 600 pixels */</span></span><br><span class="line"><span class="keyword">@media</span> (<span class="attribute">max-width</span>: <span class="number">600px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">p</span> &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Flexbox-display"><a href="#Flexbox-display" class="headerlink" title="Flexbox (display)"></a>Flexbox (display)</h2><p>flex is a value for the display property.</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3schools.com/css/css3_flexbox.asp">overview1</a></p>
+<p><a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">overview2</a></p>
+<p><strong>—&gt; <a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/what-is-the-difference-between-displayinline-flex-and-displayflex-in-css/#">flex vs. inline-flex</a></strong></p>
+<p><strong>when  you use flex, it no longer abides by inline&#x2F;block&#x2F;inline-block&#x2F;none</strong></p>
+<p>When you assign <code>display: flex;</code> to an element, it changes the default behavior of that element and its children.</p>
+<p>By default:</p>
+<ul>
+<li><code>&lt;div&gt;</code> elements are block-level elements, meaning they typically start on a new line and take up the full width available.</li>
+<li><code>&lt;span&gt;</code> elements are inline-level elements, meaning they don’t start on a new line and only take up as much width as necessary.</li>
+</ul>
+<p>When you apply <code>display: flex;</code> to a parent element, it turns into a flex container, and its children become flex items. The flex container can then control the layout of its flex items using various flexbox properties.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.flex-container &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  gap: 20px; /* This is the flex gap */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.flex-item &#123;</span><br><span class="line">  background-color: #f0f0f0;</span><br><span class="line">  padding: 10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/flex1.png" alt="flexbox"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/flex2.png" alt="image-20240427171706301"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/flex3.png" alt="flex"></p>
+<h3 id="Flex-Direction"><a href="#Flex-Direction" class="headerlink" title="Flex Direction"></a>Flex Direction</h3><p><a target="_blank" rel="noopener" href="https://www.w3schools.com/cssref/css3_pr_flex-direction.php">https://www.w3schools.com/cssref/css3_pr_flex-direction.php</a></p>
+<p>try to run and play with this code</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>Flex Direction Example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">    .container &#123;</span><br><span class="line">        display: flex;</span><br><span class="line">        border: 2px solid #333;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .item &#123;</span><br><span class="line">        flex = 1;</span><br><span class="line">        padding: 20px;</span><br><span class="line">        border: 1px solid #000;</span><br><span class="line">        margin: 10px;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>flex-direction: row;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span> <span class="attr">style</span>=<span class="string">&quot;flex-direction: row;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>flex-direction: row-reverse;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span> <span class="attr">style</span>=<span class="string">&quot;flex-direction: row-reverse;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>flex-direction: column;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span> <span class="attr">style</span>=<span class="string">&quot;flex-direction: column;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>flex-direction: column-reverse;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span> <span class="attr">style</span>=<span class="string">&quot;flex-direction: column-reverse;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item&quot;</span>&gt;</span>Item 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>In this HTML document, each flex container demonstrates a different <code>flex-direction</code> value: <code>row</code>, <code>row-reverse</code>, <code>column</code>, and <code>column-reverse</code>. You can copy and paste this code into an HTML file and open it in a web browser to see the visual layout changes produced by each <code>flex-direction</code> value.</p>
+<p><strong>flex basis has to go on to the child not on the container</strong></p>
+<p>In Flexbox, certain properties are applied to the flex container, while others are applied to the flex items. Here’s a breakdown:</p>
+<p><strong>Properties for the Flex Container:</strong></p>
+<ol>
+<li><strong>display</strong>: Specifies the container as a flex container. Use <code>display: flex;</code> or <code>display: inline-flex;</code> on the container element.</li>
+<li><strong>flex-direction</strong>: Defines the direction in which flex items are placed in the flex container. Options include <code>row</code>, <code>row-reverse</code>, <code>column</code>, and <code>column-reverse</code>.</li>
+<li><strong>flex-wrap</strong>: Determines whether flex items are forced onto a single line or can wrap onto multiple lines. Options include <code>nowrap</code>, <code>wrap</code>, and <code>wrap-reverse</code>.</li>
+<li><strong>justify-content</strong>: Aligns flex items along the main axis of the flex container. Options include <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, and <code>space-around</code>.</li>
+<li><strong>align-items</strong>: Aligns flex items along the cross axis of the flex container when they do not take up all the available space. Options include <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>stretch</code>, and <code>baseline</code>.</li>
+<li><strong>align-content</strong>: Aligns a flex container’s lines within the flex container when there’s extra space in the cross axis. Options are similar to <code>align-items</code>.</li>
+</ol>
+<p><strong>Properties for the Flex Items:</strong></p>
+<ol>
+<li><strong>flex</strong>: Shorthand for <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code>. It specifies how a flex item will grow, shrink, and its initial size.</li>
+<li><strong>flex-grow</strong>: Specifies the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. If all items have <code>flex-grow</code> set to 1, the remaining space in the container will be distributed equally among the items.</li>
+<li><strong>flex-shrink</strong>: Specifies the ability for a flex item to shrink if necessary.</li>
+<li><strong>flex-basis</strong>: Specifies the initial main size of a flex item before additional space is distributed according to <code>flex-grow</code> and <code>flex-shrink</code>.</li>
+<li><strong>order</strong>: Specifies the order in which a flex item appears in the flex container. By default, all flex items have an order of 0, but this property allows you to change the order.</li>
+<li><strong>align-self</strong>: Allows the default alignment set by <code>align-items</code> to be overridden for individual flex items. It accepts the same values as <code>align-items</code>.</li>
+</ol>
+<h3 id="Flex-Layout"><a href="#Flex-Layout" class="headerlink" title="Flex Layout"></a>Flex Layout</h3><p><a target="_blank" rel="noopener" href="https://appbrewery.github.io/flex-layout/">https://appbrewery.github.io/flex-layout/</a></p>
+<ul>
+<li>align-self: flex-start</li>
+</ul>
+<p>it makes this item separate from the group things to do its own thing</p>
+<p><a target="_blank" rel="noopener" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+<h3 id="Flex-Size"><a href="#Flex-Size" class="headerlink" title="Flex Size"></a>Flex Size</h3><p><strong><font style: color = red >content width &lt; width &lt; flex-basis &lt; min-width&#x2F;max-width</font></strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Width Properties Example<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">display</span>: flex;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">justify-content</span>: space-around;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">align-items</span>: center;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">padding</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    </span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.item</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">background-color</span>: <span class="number">#f0f0f0</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">padding</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">margin</span>: <span class="number">5px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="comment">/* Set different width properties */</span></span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.content-width</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="comment">/* Default value */</span></span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    </span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.width</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">width</span>: <span class="number">200px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    </span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.flex-basis</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">flex-basis</span>: <span class="number">150px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">    </span></span><br><span class="line"><span class="language-css">    <span class="selector-class">.min-max-width</span> &#123;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">min-width</span>: <span class="number">100px</span>;</span></span><br><span class="line"><span class="language-css">      <span class="attribute">max-width</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item content-width&quot;</span>&gt;</span>Content Width<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item width&quot;</span>&gt;</span>Width<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item flex-basis&quot;</span>&gt;</span>Flex Basis<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;item min-max-width&quot;</span>&gt;</span>Min-Max Width<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><strong>Content Width</strong> (<code>content-width</code>):<ul>
+<li>The <code>.content-width</code> class doesn’t have any specific width properties applied to it. Therefore, its width is determined solely by the content it contains. This is the default behavior of block-level elements like <code>&lt;div&gt;</code>.</li>
+<li>In the example, the <code>.content-width</code> item will expand or shrink based on the width of the content inside it, along with any padding and margins applied to it.</li>
+</ul>
+</li>
+<li><strong>Width</strong> (<code>width</code>):<ul>
+<li>The <code>.width</code> class sets a fixed width of 200 pixels for the <code>.item</code> element. This overrides the default content width and any other sizing properties.</li>
+<li>In the example, the <code>.width</code> item will always have a width of 200 pixels, regardless of the content it contains or the space available within its container.</li>
+</ul>
+</li>
+<li><strong>Flex-Basis</strong> (<code>flex-basis</code>):<ul>
+<li>The <code>.flex-basis</code> class sets the initial main size of the <code>.item</code> element to 150 pixels when it’s used within a flex container. This property behaves similarly to <code>width</code>, but it’s specific to flex items.</li>
+<li>In the example, the <code>.flex-basis</code> item will initially have a width of 150 pixels within the flex container. However, it can still grow or shrink based on the available space and the flex layout algorithm.</li>
+</ul>
+</li>
+<li><strong>Min-Width and Max-Width</strong> (<code>min-width</code> and <code>max-width</code>):<ul>
+<li>The <code>.min-max-width</code> class sets constraints on the width of the <code>.item</code> element, ensuring it doesn’t become narrower than 100 pixels and wider than 300 pixels.</li>
+<li>In the example, the <code>.min-max-width</code> item will have a width that adapts to its content if it’s less than 100 pixels wide. However, it won’t shrink below 100 pixels due to the <code>min-width</code> constraint. Similarly, it won’t expand beyond 300 pixels due to the <code>max-width</code> constraint.</li>
+</ul>
+</li>
+</ol>
+<h4 id="flex-grow-flex-shrink"><a href="#flex-grow-flex-shrink" class="headerlink" title="flex grow flex shrink"></a>flex grow flex shrink</h4><p><a target="_blank" rel="noopener" href="https://www.freecodecamp.org/news/even-more-about-how-flexbox-works-explained-in-big-colorful-animated-gifs-a5a74812b053/">https://www.freecodecamp.org/news/even-more-about-how-flexbox-works-explained-in-big-colorful-animated-gifs-a5a74812b053/</a></p>
+<ul>
+<li><strong>Flex-shrink</strong>: This property controls how much a flex item can shrink relative to the rest of the flex items when there’s not enough space in the flex container. By default, the value is <code>1</code>, meaning the item can shrink to prevent overflow.</li>
+<li><strong><code>flex-shrink: 0</code></strong>: This explicitly disables shrinking for the flex item. It tells the browser not to allow the item to shrink, regardless of the available space and the shrinking potential of other flex items.</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/flexx.png" alt="image-20240427211818113"></p>
+<p>Let’s break down <strong><font style: color = red>flex: 1 1 0</font> :</strong></p>
+<ol>
+<li><strong><code>flex-grow</code></strong>: This property determines how much the flex item can grow relative to other flex items within the same flex container when there is extra space available. In the case of <code>flex: 1 1 0</code>, <code>flex-grow</code> is set to <code>1</code>, meaning the item will grow proportionally to other items with a <code>flex-grow</code> value of <code>1</code>. If all items in the flex container have the same <code>flex-grow</code> value, they will grow equally to fill the available space.</li>
+<li><strong><code>flex-shrink</code></strong>: This property determines how much the flex item can shrink relative to other flex items when there isn’t enough space in the flex container. Again, in <code>flex: 1 1 0</code>, <code>flex-shrink</code> is set to <code>1</code>, indicating that the item can shrink proportionally to other items with a <code>flex-shrink</code> value of <code>1</code>. If all items have the same <code>flex-shrink</code> value, they will shrink equally to prevent overflow or wrapping.</li>
+<li><strong><code>flex-basis</code></strong>: This property defines the initial size of the flex item before any extra space is distributed among flex items. In <code>flex: 1 1 0</code>, <code>flex-basis</code> is set to <code>0</code>. This means the initial size of the item will be determined solely by its content and any constraints imposed by <code>min-width</code> and <code>max-width</code>. Setting <code>flex-basis</code> to <code>0</code> allows the flex container to distribute space evenly among flex items based on their <code>flex-grow</code> and <code>flex-shrink</code> values without considering their initial sizes.</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/FLEXr.png" alt="image-20240427212055382"></p>
+<p><strong><a target="_blank" rel="noopener" href="https://appbrewery.github.io/flexbox-sizing-exercise/">https://appbrewery.github.io/flexbox-sizing-exercise/</a></strong></p>
+<p>answer:</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/flexex.png" alt="image-20240427213251709"></p>
+<h2 id="CSS-grid"><a href="#CSS-grid" class="headerlink" title="CSS grid"></a>CSS grid</h2><p>flex vs grid</p>
+<p><a target="_blank" rel="noopener" href="https://appbrewery.github.io/grid-vs-flexbox/">https://appbrewery.github.io/grid-vs-flexbox/</a></p>
+<h3 id="grid-display"><a href="#grid-display" class="headerlink" title="grid display"></a>grid display</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/grid1.png" alt="image-20240427215050218"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/grid2.png" alt="image-20240427215345790"></p>
+<p><strong>the grid will try to take up the full width of the screen so we need to set the width to 800 px, otherwise when the window is larger there will be gap between columns.</strong></p>
+<h3 id="grid-sizing"><a href="#grid-sizing" class="headerlink" title="grid sizing"></a>grid sizing</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/gridsize1.png" alt="image-20240427215741981"></p>
+<p>its eqaul to : </p>
+<p>​	grid-template: 100px 200px &#x2F; 400px 800px;</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.grid-container</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    <span class="attribute">grid-template-columns</span>: auto auto auto; <span class="comment">/* Three columns with equal width */</span></span><br><span class="line">    <span class="comment">/* Other grid properties */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item</span> &#123;</span><br><span class="line">    <span class="comment">/* Styles for grid items */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In this example:</p>
+<ul>
+<li><code>grid-template-columns: auto auto auto;</code> sets up a grid container with three columns, each with a width determined by the content inside it. The “auto” keyword tells the browser to automatically size the columns based on the content within them.</li>
+<li>Each “auto” column will expand to fit its content. If one column has more content than another, it will expand accordingly.</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/grid3.png" alt="image-20240427221447005"></p>
+<p>when you use auto on a row, it’s going to fit the content</p>
+<p>while you use auto on columns, it’s going to fit the 100% width </p>
+<p><strong>grid sizing:</strong> <a target="_blank" rel="noopener" href="https://appbrewery.github.io/grid-sizing/">https://appbrewery.github.io/grid-sizing/</a></p>
+<ul>
+<li>gractional size:</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240427225230663.png" alt="image-20240427225230663"></p>
+<ul>
+<li>MinMaz size</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240427225421390.png" alt="image-20240427225421390"></p>
+<p>wont wont be bigger than 800 px and wont be smaller than 400px</p>
+<ul>
+<li><p>repeat</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240427225726154.png" alt="image-20240427225726154"></p>
+</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240427225849044.png" alt="image-20240427225849044"></p>
+<p>the extra one will get an automatic size based on its height and also any existing column size. it will match with the existing column size </p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240427230009425.png" alt="image-20240427230009425"></p>
+<p>create a new row that doesnt fit in the grid, then give it a 300 px of the height</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240427230310246.png" alt="image-20240427230310246"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240427230359575.png" alt="image-20240427230359575"></p>
+<h3 id="Grid-Placement"><a href="#Grid-Placement" class="headerlink" title="Grid Placement"></a>Grid Placement</h3><ul>
+<li><p>Grid Container -&gt; div</p>
+</li>
+<li><p>tracks</p>
+</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428113007527.png" alt="image-20240428113007527"></p>
+<ul>
+<li>cells</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428113040763.png" alt="image-20240428113040763"></p>
+<ul>
+<li>lines</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428113133602.png" alt="image-20240428113133602"></p>
+<ul>
+<li>exmaple</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428113629207.png" alt="image-20240428113629207"></p>
+<p>if you don’t set the height to 100 vh, the height will be automatically sett according to the content.</p>
+<p>we dont need to use margin or padding to separate the grids because we have gap : 3 rem;</p>
+<p><strong>use FlexBox to align item in the center of each grid!</strong></p>
+<p>justify-content, align-items</p>
+<ol>
+<li><strong>justify-content</strong>:<ul>
+<li>This property aligns flex items along <strong>the main axis</strong> of the flex container.</li>
+<li>It controls how flex items are spaced out or distributed along the main axis.</li>
+<li>Values for <code>justify-content</code> include <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>space-between</code>, and <code>space-around</code>, among others.</li>
+<li>For a flex container with a horizontal main axis, <code>justify-content</code> will control horizontal alignment.</li>
+<li>Example: <code>justify-content: center;</code> will center flex items along the main axis.</li>
+</ul>
+</li>
+<li><strong>align-items</strong>:<ul>
+<li>This property aligns flex items along <strong>the cross-axis</strong> of the flex container.</li>
+<li>It controls how flex items are positioned along the <strong>perpendicular axis</strong> to the main axis.</li>
+<li>Values for <code>align-items</code> include <code>flex-start</code>, <code>flex-end</code>, <code>center</code>, <code>baseline</code>, and <code>stretch</code>.</li>
+<li>For a flex container with a horizontal main axis, <code>align-items</code> will control vertical alignment.</li>
+<li>Example: <code>align-items: center;</code> will center flex items along the cross axis.</li>
+</ul>
+</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428114312972.png" alt="image-20240428114312972"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428114337157.png" alt="image-20240428114337157"></p>
+<h3 id="grid-column"><a href="#grid-column" class="headerlink" title="grid-column"></a>grid-column</h3><p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column-start">mdn web docs</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.grid-container &#123;</span><br><span class="line">  display: grid;</span><br><span class="line">  grid-template-columns: 100px 100px 100px; /* Three columns each 100px wide */</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.grid-item &#123;</span><br><span class="line">  grid-column-start: 2;</span><br><span class="line">  grid-column-end: span 2; /* Spanning across 2 columns */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In this example:</p>
+<ul>
+<li>The grid item starts at the second column line (<code>grid-column-start: 2</code>) in the grid layout.</li>
+<li>It spans across two columns (<code>grid-column-end: span 2</code>), covering both the second and third columns in the grid.</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428115821739.png" alt="image-20240428115821739"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428115949491.png" alt="image-20240428115949491"></p>
+<h3 id="grid-row"><a href="#grid-row" class="headerlink" title="grid-row"></a>grid-row</h3><p>the same with grid-column</p>
+<h3 id="grid-order"><a href="#grid-order" class="headerlink" title="grid -order"></a>grid -order</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428120925397.png" alt="image-20240428120925397"></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.grid-container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="number">100px</span> <span class="number">100px</span> <span class="number">100px</span>; <span class="comment">/* Three columns each 100px wide */</span></span><br><span class="line">  <span class="attribute">grid-template-rows</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.grid-item</span> &#123;</span><br><span class="line">  <span class="comment">/* By default, grid items have an order value of 0 */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.grid-item</span><span class="selector-pseudo">:nth-child</span>(<span class="number">2</span>) &#123;</span><br><span class="line">  <span class="attribute">order</span>: <span class="number">3</span>; <span class="comment">/* This grid item will be displayed third, regardless of its source order */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>In this updated example:</p>
+<ul>
+<li>All <code>.grid-item</code> elements have a default <code>order</code> value of <code>0</code>, meaning they will be displayed in their source order.</li>
+<li>The <code>.grid-item:nth-child(2)</code> selector targets the second grid item and sets its order to <code>3</code>. This means it will be displayed third within the grid container, overriding its default order.</li>
+</ul>
+<p>another way:</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428121524621.png" alt="image-20240428121524621"></p>
+<p>equal to:</p>
+<h3 id="grid-area"><a href="#grid-area" class="headerlink" title="grid-area"></a>grid-area</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428121559716.png" alt="image-20240428121559716"></p>
+<p>The values you provided, grid-area:<code>2/1/3/4</code>, represent the grid area using four line numbers: <code>row-start</code> &#x2F; <code>column-start</code> &#x2F; <code>row-end</code> &#x2F; <code>column-end</code>.</p>
+<p>Let’s break it down:</p>
+<ul>
+<li>The first value, <code>2</code>, represents the starting row line.</li>
+<li>The second value, <code>1</code>, represents the starting column line.</li>
+<li>The third value, <code>3</code>, represents the ending row line.</li>
+<li>The fourth value, <code>4</code>, represents the ending column line.</li>
+</ul>
+<h3 id="overlapping-layout"><a href="#overlapping-layout" class="headerlink" title="overlapping layout"></a>overlapping layout</h3><p><strong>grid lletsyou overlay items, but flex box doesn’t allow you to do so</strong></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428122305424.png" alt="image-20240428122305424"></p>
+<h2 id="bootstrap-framework"><a href="#bootstrap-framework" class="headerlink" title="bootstrap framework"></a>bootstrap framework</h2><p>it’s an external layout system 🥰</p>
+<h3 id="how-to-use-bootstrap"><a href="#how-to-use-bootstrap" class="headerlink" title="how to use bootstrap?"></a>how to use bootstrap?</h3><p><a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.2/getting-started/introduction/">https://getbootstrap.com/docs/5.2/getting-started/introduction/</a></p>
+<p><strong><font style: color = red>make sure your custom css occurs below the bootstrap link, so the custom css can override the bootstrap</font></strong></p>
+<h3 id="CDN-links"><a href="#CDN-links" class="headerlink" title="CDN links"></a>CDN links</h3><p>As reference, here are our primary CDN links.</p>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CSS</td>
+<td><code>https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css</code></td>
+</tr>
+<tr>
+<td>JS</td>
+<td><code>https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js</code></td>
+</tr>
+</tbody></table>
+<p>CDN stands for Content Delivery Network. </p>
+<p>Imagine you want to share a big cake with your friends at a party. Instead of bringing the whole cake to each friend individually, you cut it into slices and give each friend a slice.</p>
+<p>A CDN is like having multiple friends with slices of cake all around the party. When someone wants a slice, they can get it from the friend closest to them instead of waiting for you to bring it from the kitchen. This makes sure everyone gets cake faster and nobody has to wait too long.</p>
+<p>In the same way, a CDN has servers (like friends with cake slices) spread out in different places. When you want to access a website or its content, the CDN finds the closest server to you and gives you the content from there. This makes websites load faster for you, no matter where you are.</p>
+<h3 id="12-Column-System"><a href="#12-Column-System" class="headerlink" title="12 Column System"></a>12 Column System</h3><p><a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.2/layout/columns/">https://getbootstrap.com/docs/5.2/layout/columns/</a></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428135001357.png" alt="image-20240428135001357"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428141046256.png" alt="image-20240428141046256"></p>
+<h3 id="Bootstrap-Breakpoints"><a href="#Bootstrap-Breakpoints" class="headerlink" title="Bootstrap Breakpoints"></a>Bootstrap Breakpoints</h3><p><a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.0/layout/breakpoints/">https://getbootstrap.com/docs/5.0/layout/breakpoints/</a></p>
+<table>
+<thead>
+<tr>
+<th>Breakpoint</th>
+<th>Class infix</th>
+<th>Dimensions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>X-Small</td>
+<td><em>None</em></td>
+<td>&lt;576px</td>
+</tr>
+<tr>
+<td>Small</td>
+<td><code>sm</code></td>
+<td>≥576px</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td><code>md</code></td>
+<td>≥768px</td>
+</tr>
+<tr>
+<td>Large</td>
+<td><code>lg</code></td>
+<td>≥992px</td>
+</tr>
+<tr>
+<td>Extra large</td>
+<td><code>xl</code></td>
+<td>≥1200px</td>
+</tr>
+<tr>
+<td>Extra extra large</td>
+<td><code>xxl</code></td>
+<td>≥1400px</td>
+</tr>
+</tbody></table>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428142204650.png" alt="image-20240428142204650"></p>
+<ol>
+<li><strong>sm</strong>: Represents small screens, typically smartphones in portrait orientation.</li>
+<li><strong>md</strong>: Represents medium-sized screens, often tablets or laptops.</li>
+<li><strong>lg</strong>: Represents large screens, such as desktop monitors or large laptops.</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/./img/image-20240428142331315.png" alt="image-20240428142331315"></p>
+<p>col will automatically adjust the size to take up whatever proportion remains</p>
+<h3 id="Bootstrap-Component"><a href="#Bootstrap-Component" class="headerlink" title="Bootstrap Component"></a>Bootstrap Component</h3><p>prebuilt component</p>
+<p>button: <a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.3/components/buttons/#base-class">https://getbootstrap.com/docs/5.3/components/buttons/#base-class</a></p>
+<h3 id="Bootstrap-JavaScript"><a href="#Bootstrap-JavaScript" class="headerlink" title="Bootstrap JavaScript"></a>Bootstrap JavaScript</h3><p>how to include bootstrap css and js? <a target="_blank" rel="noopener" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">https://getbootstrap.com/docs/5.3/getting-started/introduction/</a></p>
+<p>add javascript so that the dropdown menu and all these clicking functions work</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://DanLovPotato.github.io">Dan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://danlovpotato.github.io/2024/04/26/SoftwareDevelopment/responsiveCSS/">https://danlovpotato.github.io/2024/04/26/SoftwareDevelopment/responsiveCSS/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/02/10/rjhHVtISdz28Tk3.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/04/26/SoftwareDevelopment/html-responsiveWin/" title="Frontend review"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Frontend review</div></div></a></div><div class="next-post pull-right"><a href="/2024/04/26/SoftwareDevelopment/html/" title="Frontend review"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Frontend review</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2023/02/10/rjhHVtISdz28Tk3.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dan</div><div class="author-info__description">Lack the words to compliment myself today.</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">45</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">8</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/DanLovPotato"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Responsive-web-window"><span class="toc-number">1.</span> <span class="toc-text">Responsive web window</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#media-query"><span class="toc-number">1.1.</span> <span class="toc-text">media query</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Flexbox-display"><span class="toc-number">1.2.</span> <span class="toc-text">Flexbox (display)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Flex-Direction"><span class="toc-number">1.2.1.</span> <span class="toc-text">Flex Direction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flex-Layout"><span class="toc-number">1.2.2.</span> <span class="toc-text">Flex Layout</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flex-Size"><span class="toc-number">1.2.3.</span> <span class="toc-text">Flex Size</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#flex-grow-flex-shrink"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">flex grow flex shrink</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS-grid"><span class="toc-number">1.3.</span> <span class="toc-text">CSS grid</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#grid-display"><span class="toc-number">1.3.1.</span> <span class="toc-text">grid display</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grid-sizing"><span class="toc-number">1.3.2.</span> <span class="toc-text">grid sizing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Grid-Placement"><span class="toc-number">1.3.3.</span> <span class="toc-text">Grid Placement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grid-column"><span class="toc-number">1.3.4.</span> <span class="toc-text">grid-column</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grid-row"><span class="toc-number">1.3.5.</span> <span class="toc-text">grid-row</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grid-order"><span class="toc-number">1.3.6.</span> <span class="toc-text">grid -order</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#grid-area"><span class="toc-number">1.3.7.</span> <span class="toc-text">grid-area</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#overlapping-layout"><span class="toc-number">1.3.8.</span> <span class="toc-text">overlapping layout</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bootstrap-framework"><span class="toc-number">1.4.</span> <span class="toc-text">bootstrap framework</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-use-bootstrap"><span class="toc-number">1.4.1.</span> <span class="toc-text">how to use bootstrap?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CDN-links"><span class="toc-number">1.4.2.</span> <span class="toc-text">CDN links</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-Column-System"><span class="toc-number">1.4.3.</span> <span class="toc-text">12 Column System</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bootstrap-Breakpoints"><span class="toc-number">1.4.4.</span> <span class="toc-text">Bootstrap Breakpoints</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bootstrap-Component"><span class="toc-number">1.4.5.</span> <span class="toc-text">Bootstrap Component</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Bootstrap-JavaScript"><span class="toc-number">1.4.6.</span> <span class="toc-text">Bootstrap JavaScript</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/22/Leetcode-2Month/Array/" title="Array">Array</a><time datetime="2024-05-22T04:00:00.000Z" title="Created 2024-05-22 00:00:00">2024-05-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/01/SoftwareDevelopment/html-REVIEW/" title="HTMLreview">HTMLreview</a><time datetime="2024-05-01T04:00:00.000Z" title="Created 2024-05-01 00:00:00">2024-05-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/28/PHP/php/" title="💐PHP💐">💐PHP💐</a><time datetime="2024-04-29T01:03:41.425Z" title="Created 2024-04-28 21:03:41">2024-04-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/26/SoftwareDevelopment/css/" title="Frontend review">Frontend review</a><time datetime="2024-04-26T04:00:00.000Z" title="Created 2024-04-26 00:00:00">2024-04-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/26/SoftwareDevelopment/html-responsiveWin/" title="Frontend review">Frontend review</a><time datetime="2024-04-26T04:00:00.000Z" title="Created 2024-04-26 00:00:00">2024-04-26</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Dan</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
